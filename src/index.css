@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+  box-sizing: border-box;
+}
+
+.logo {
+  width: 150px;
+}
+
+.navbar {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+}
+
+.navbar__links {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  font-size: 1.5rem;
+}
+
+.cart__img {
+  width: 50px;
+}
+
+.cart__cantidad {
+  color: white;
+  text-align: center;
+}
+
+.greeting {
+  text-align: center;
+}
