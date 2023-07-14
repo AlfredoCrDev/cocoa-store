@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "nombre": "Base de maquillaje",
+    "imagen": "",
+    "descripcion": "Base de maquillaje de alta cobertura para un aspecto impecable",
+    "stock": 10,
+    "precio": 25.99,
+    "categoria": "Maquillaje facial"
+  },
+  {
+    "id": 2,
+    "nombre": "Labial rojo",
+    "imagen": "",
+    "descripcion": "Labial de larga duración en tono rojo intenso",
+    "stock": 5,
+    "precio": 12.5,
+    "categoria": "Labiales"
+  },
+  {
+    "id": 3,
+    "nombre": "Máscara de pestañas",
+    "imagen": "",
+    "descripcion": "Máscara de pestañas para alargar y dar volumen",
+    "stock": 15,
+    "precio": 9.99,
+    "categoria": "Maquillaje facial"
+  },
+  {
+    "id": 4,
+    "nombre": "Crema hidratante",
+    "imagen": "",
+    "descripcion": "Crema hidratante de día para una piel suave y radiante",
+    "stock": 12,
+    "precio": 19.99,
+    "categoria": "Cuidado facial"
+  },
+  {
+    "id": 5,
+    "nombre": "Labial nude",
+    "imagen": "",
+    "descripcion": "Labial de tono nude perfecto para el día a día",
+    "stock": 8,
+    "precio": 11.99,
+    "categoria": "Labiales"
+  },
+  {
+    "id": 6,
+    "nombre": "Crema antiarrugas",
+    "imagen": "",
+    "descripcion": "Crema antiarrugas con colágeno y ácido hialurónico",
+    "stock": 6,
+    "precio": 29.99,
+    "categoria": "Cuidado facial"
+  }
+]
