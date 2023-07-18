@@ -1,8 +1,15 @@
+import { Link } from "react-router-dom"
 
-
-function Item() {
+function Item(props) {
   return (
-    <div>Item</div>
+      <div className="cardProducto">
+        <h2>{props.producto.nombre}</h2>
+        <img className="imgProducto" src={props.producto.imagen}/>
+        <p>Precio: $ {props.producto.precio}</p>
+        <Link to={`/producto/${props.producto.id}`}>
+          <button>Ver detalle</button>
+        </Link>
+      </div>
   )
 }
 
