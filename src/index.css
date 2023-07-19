@@ -13,6 +13,7 @@
 .navbar {
   padding: 15px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   background-color: black;
@@ -20,6 +21,8 @@
 
 .navbar__links {
   display: flex;
+  flex-wrap: wrap;
+
   align-items: center;
   gap: 3rem;
   font-size: 1.5rem;
