@@ -2,7 +2,7 @@
   {
     "id": 1,
     "nombre": "Base de maquillaje",
-    "imagen": "src/img/cocoa-logo.png",
+    "imagen": "",
     "descripcion": "Base de maquillaje de alta cobertura para un aspecto impecable",
     "stock": 10,
     "precio": 25.99,
@@ -11,7 +11,7 @@
   {
     "id": 2,
     "nombre": "Labial rojo",
-    "imagen": "src/img/cocoa-logo.png",
+    "imagen": "",
     "descripcion": "Labial de larga duración en tono rojo intenso",
     "stock": 5,
     "precio": 12.5,
@@ -20,7 +20,7 @@
   {
     "id": 3,
     "nombre": "Máscara de pestañas",
-    "imagen": "src/img/cocoa-logo.png",
+    "imagen": "",
     "descripcion": "Máscara de pestañas para alargar y dar volumen",
     "stock": 15,
     "precio": 9.99,
@@ -29,7 +29,7 @@
   {
     "id": 4,
     "nombre": "Crema hidratante",
-    "imagen": "src/img/cocoa-logo.png",
+    "imagen": "",
     "descripcion": "Crema hidratante de día para una piel suave y radiante",
     "stock": 12,
     "precio": 19.99,
@@ -38,7 +38,7 @@
   {
     "id": 5,
     "nombre": "Labial nude",
-    "imagen": "src/img/cocoa-logo.png",
+    "imagen": "",
     "descripcion": "Labial de tono nude perfecto para el día a día",
     "stock": 8,
     "precio": 11.99,
@@ -47,7 +47,7 @@
   {
     "id": 6,
     "nombre": "Crema antiarrugas",
-    "imagen": "src/img/cocoa-logo.png",
+    "imagen": "",
     "descripcion": "Crema antiarrugas con colágeno y ácido hialurónico",
     "stock": 6,
     "precio": 29.99,

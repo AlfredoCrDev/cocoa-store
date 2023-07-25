@@ -5,22 +5,26 @@ function ItemCount(props) {
   const [count, setCount] = useState(0)
 
   function handleSumar(){
-    setCount(count + 1)
+    if(count < props.stock){
+      setCount(count + 1)
+    } 
   }
 
   function handleRestar(){
-    setCount(count - 1)
+    if(count > 1){
+      setCount(count - 1)
+    }
   }
 
   function handleAgregar(){
-    props.onAdd()
+    props.onAdd(count)
   }
 
   return (
     <div>
-      <button onClick={handleSumar}>+</button>
+      <button onClick={handleRestar} >-</button>
       <p>{count}</p>
-      <button onClick={handleRestar}>-</button>
+      <button onClick={handleSumar}>+</button>
       <button onClick={handleAgregar} >Agregar a Carrito</button>
     </div>
   )

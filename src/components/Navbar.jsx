@@ -1,6 +1,8 @@
 import { NavLink } from 'react-router-dom';
 import CartWidget from './CartWidget.jsx'
 
+import cocoaLogo from "../img/cocoa-logo.png"
+
 
 function Navbar() {
 
@@ -8,7 +10,7 @@ function Navbar() {
     <header className='navbar'>
       <div>
         <NavLink to="/">
-          <img src="src/img/cocoa-logo.png" className="logo" alt="" />
+          <img src={ cocoaLogo } className="logo" alt="logo cocoa" />
         </NavLink>
       </div>
       <nav className="navbar__links">

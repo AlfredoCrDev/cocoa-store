@@ -30,16 +30,10 @@ function ItemListContainer() {
       }, 2000)
     },[parametros.id])
   
-  //ACCIONES
+  //ACCIONES 
   
-  function onAdd(){
-    console.log("Soy la funcion on Add");
-  }
-  
-
   return (
     <div>
-      {/* <ItemCount initial={1} stock={10} onAdd={onAdd} /> */}
       <ItemList productos={productos} parametros={parametros} />
     </div>
   )
