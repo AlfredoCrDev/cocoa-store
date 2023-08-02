@@ -1,9 +1,9 @@
 import { Ripples } from '@uiball/loaders'
 
-function Cart() {
+function Loader() {
   return (
     <Ripples size={45} speed={2} color="black"/>
   )
 }
 
-export default Cart
+export default Loader

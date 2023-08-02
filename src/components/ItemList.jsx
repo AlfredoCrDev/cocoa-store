@@ -1,11 +1,9 @@
 import Item from "./Item"
 
-function ItemList({ productos, parametros }) {
-  const productosFiltrados = parametros.id ? productos.filter(item => item.categoria === parametros.id) : productos;
-
+function ItemList(props) {
   return (
     <div className="cardContainer">
-      {productosFiltrados.map(producto => (
+      {props.productos.map(producto => (
         <Item key={producto.id} producto={producto} />
       ))}
     </div>

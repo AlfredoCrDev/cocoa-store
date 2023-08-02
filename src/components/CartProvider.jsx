@@ -9,8 +9,9 @@ function CartProvider(props) {
 
 
   // ACCIONES
-  const addItem = (nuevaCantidad)=>{
+  const addItem = (nuevaCantidad, productoAgregado)=>{
     setCantidadTotal(nuevaCantidad)
+    console.log(productoAgregado);
   }
   const removeItem =(id) => {}
   const clearCart=() => {}

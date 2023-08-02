@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 function ItemDetail( props ) {
 
   const valorDelContexto = useContext(contexto)
-  console.log(valorDelContexto);
+  // console.log(valorDelContexto);
 
   // ESTADOS
   const [count, setCount] = useState(0);
@@ -18,7 +18,7 @@ function ItemDetail( props ) {
   function onAdd(cantidadProducto){
     setCount(cantidadProducto);
     setMostrarCount(false);
-    valorDelContexto.addItem(cantidadProducto)
+    valorDelContexto.addItem(cantidadProducto, props.productos)
   }
 
   return (

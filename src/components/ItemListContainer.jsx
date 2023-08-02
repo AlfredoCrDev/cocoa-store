@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
-import ItemCount from './ItemCount.jsx'
 import ItemList from './ItemList.jsx';
 import { useParams } from 'react-router-dom';
+import { traerProductos, traerProductosPorCategoria } from '../utils.jsx';
+import Loader from './Loader.jsx';
 
 
 function ItemListContainer() {
@@ -11,32 +12,36 @@ function ItemListContainer() {
   // ESTADOS
 
   const [productos, setProductos] = useState([]);
+  const [loader, setLoader] = useState(true)
   
   // EFECTOS
   
-  useEffect(()=>{
-    setTimeout(()=>{
-      fetch("/bdd/data.json")
-        .then(res => res.json())
-        .then(json =>{
-          if (!parametros.id) {
-            setProductos(json);
-          } else {
-            const filtrado = json.filter(item => item.categoria === parametros.id);
-            setProductos(filtrado);
-          }
-        })
-        .catch(error=>console.log('Error del FETCH', error))
-      }, 2000)
-    },[parametros.id])
-  
+  useEffect(()=> {
+
+    let pedido;
+
+    if(parametros.id){
+      pedido = traerProductosPorCategoria(parametros.id)
+    } else {
+      pedido = traerProductos()
+    }
+      pedido.then((resultado)=> {
+        setProductos(resultado)
+        setLoader(false)
+      })
+  }, [parametros.id])
+
   //ACCIONES 
-  
-  return (
-    <div>
-      <ItemList productos={productos} parametros={parametros} />
-    </div>
-  )
+
+  if(loader){
+    return (
+    <Loader/>
+    )
+  } else {
+    return (
+      <ItemList productos={productos} />
+    )
+  }
 }
 
 export default ItemListContainer

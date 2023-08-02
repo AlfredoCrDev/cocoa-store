@@ -16,9 +16,9 @@ function Navbar() {
       <nav className="navbar__links">
         <NavLink to="/">Home</NavLink>
         <NavLink to="/categoria/Labiales">Labiales</NavLink>
-        <NavLink to="/categoria/Cuidado facial">Cuidado Facial</NavLink>
-        <NavLink to="/categoria/Maquillaje facial">Maquillaje Facial</NavLink>
-        <NavLink to="/carrito">
+        <NavLink to="/categoria/Skincare">Cuidado Facial</NavLink>
+        <NavLink to="/categoria/Maquillaje">Maquillaje Facial</NavLink>
+        <NavLink to="/cart">
           <CartWidget/>
         </NavLink>
       </nav>

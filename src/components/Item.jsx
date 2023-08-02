@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom"
 import cocoa from "../img/cocoa-logo.png"
 
-
 function Item(props) {
   return (
       <div className="cardProducto">

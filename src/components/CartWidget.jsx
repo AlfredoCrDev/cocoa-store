@@ -5,7 +5,6 @@ import carrito from "../img/carro.png"
 function CartWidget() {
 
   const valor = useContext(contexto)
-  console.log(valor);
 
   return (
     <div className="cart">
