@@ -8,7 +8,6 @@ import { Link } from "react-router-dom";
 function ItemDetail( props ) {
 
   const valorDelContexto = useContext(contexto)
-  // console.log(valorDelContexto);
 
   // ESTADOS
   const [count, setCount] = useState(0);
@@ -23,18 +22,15 @@ function ItemDetail( props ) {
 
   return (
     <div>
-      {props.productos.map(producto => (
-        <div key={producto.id}>
-          <h2>{producto.nombre}</h2>
-          <p>Categoria: {producto.categoria}</p>
-          <img className="imgProducto" src={ cocoa }/>
-          <p>Detalle del producto: {producto.descripcion}</p>
-          <p>Precio: $ {producto.precio}</p>
-        </div>
-      ))}
+      <h2>{props.productos.nombre}</h2>
+      <p>Categoria: {props.productos.categoria}</p>
+      <img className="imgProducto" src={ cocoa }/>
+      <p>Detalle del producto: {props.productos.descripcion}</p>
+      <p>Precio: $ {props.productos.precio}</p>
       {mostrarCount ? (
-        <ItemCount initial={1} stock={10} onAdd={onAdd} />
-      ) : <Link to="/cart"><button>Terminar Compra</button></Link> }
+        <ItemCount initial={0} stock={props.productos.stock} onAdd={onAdd} />
+      ) : <Link to="/cart"><button>Ir a Carrito</button></Link> }
+      {<p>Unidades disponibles: {props.productos.stock - count} </p>}
     </div>
   );
 }

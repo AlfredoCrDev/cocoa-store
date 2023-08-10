@@ -1,5 +1,5 @@
 import { db } from "./firebaseConfig"
-import { collection, getDocs, query, where, getDoc, doc } from "firebase/firestore"
+import { collection, getDocs, query, where, getDoc, doc, addDoc } from "firebase/firestore"
 
 export async function traerProductos(){
   const coleccionProductos = collection(db, "productos");
@@ -35,5 +35,13 @@ export async function traerProductosPorId(id){
 
   const producto = resultado.data()
   producto.id = resultado.id
+  return producto
   
 }
+
+export async function guardarOrden(data){
+  const coleccionProductos = collection(db, "productos");
+  const resultado = await addDoc(coleccionProductos, data)
+  return resultado
+}
+

@@ -1,39 +1,48 @@
 import { useEffect, useState } from 'react';
 import ItemDetail from './ItemDetail.jsx';
 import { useParams } from 'react-router-dom';
+import { traerProductos, traerProductosPorId } from '../utils.jsx';
+import Loader from './Loader.jsx';
+
 
 function ItemDetailContainer() {
 
-  // ESTADOS
   const parametroID = useParams();
 
+  // ESTADOS
+
   const [productos, setProductos] = useState([]);
+  const [loader, setLoader] = useState(true);
   
   // EFECTOS
   
   useEffect(()=>{
-    setTimeout(()=>{
-      fetch("/bdd/data.json")
-        .then(res => res.json())
-        .then(json =>{
-          if (!parametroID.id) {
-            setProductos(json);
-          } else {
-            const filtrado = json.filter(item => item.id === (parametroID.id*1));
-            setProductos(filtrado);
-          }
-        })
-        .catch(error=>console.log('Error del FETCH', error))
-      }, 2000)
+
+    let producto;
+
+    if(parametroID.id){
+      producto = traerProductosPorId(parametroID.id)
+    } else {
+      producto = traerProductos()
+    }
+      producto.then((resultado)=> {
+        setProductos(resultado)
+        setLoader(false)
+      })
+
     },[])
 
   //ACCIONES
 
-  return (
-    <div>
-      <ItemDetail productos={productos} />
-    </div>
-  );
+  if(loader){
+    return(
+      <Loader/>
+    )
+  } else{
+    return (
+    <ItemDetail productos={productos} />
+    )
+  }
 }
 
 export default ItemDetailContainer;

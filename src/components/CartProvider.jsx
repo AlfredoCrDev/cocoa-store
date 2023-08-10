@@ -11,10 +11,17 @@ function CartProvider(props) {
   // ACCIONES
   const addItem = (nuevaCantidad, productoAgregado)=>{
     setCantidadTotal(nuevaCantidad)
-    console.log(productoAgregado);
+    const copia = carrito.slice(0)
+    copia.push(productoAgregado)
+    setCarrito(copia)
+    
   }
+  console.log({carrito});
   const removeItem =(id) => {}
   const clearCart=() => {}
+  // const cart = (productosCarrito) => {
+  //   setCantidadTotal(productosCarrito)
+  // }
 
   
   const valorDelContexto = {
