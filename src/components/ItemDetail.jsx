@@ -12,12 +12,15 @@ function ItemDetail( props ) {
   // ESTADOS
   const [count, setCount] = useState(0);
   const [mostrarCount, setMostrarCount] = useState(true)
+  const [stock, setStock] = useState(props.productos.stock)
 
   // ACCIONES
   function onAdd(cantidadProducto){
     setCount(cantidadProducto);
     setMostrarCount(false);
     valorDelContexto.addItem(cantidadProducto, props.productos)
+    setStock(stock-cantidadProducto)
+    //Agregar alerta tostify
   }
 
   return (
@@ -28,9 +31,9 @@ function ItemDetail( props ) {
       <p>Detalle del producto: {props.productos.descripcion}</p>
       <p>Precio: $ {props.productos.precio}</p>
       {mostrarCount ? (
-        <ItemCount initial={0} stock={props.productos.stock} onAdd={onAdd} />
+        <ItemCount initial={0} stock={stock} onAdd={onAdd} />
       ) : <Link to="/cart"><button>Ir a Carrito</button></Link> }
-      {<p>Unidades disponibles: {props.productos.stock - count} </p>}
+      {<p>Unidades disponibles: {stock} </p>}
     </div>
   );
 }

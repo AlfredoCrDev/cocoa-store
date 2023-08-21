@@ -25,7 +25,9 @@ function ItemCount(props) {
       <button onClick={handleRestar} >-</button>
       <p>{count}</p>
       <button onClick={handleSumar}>+</button>
-      <button onClick={handleAgregar} >Agregar a Carrito</button>
+      {count !== 0? (
+        <button onClick={handleAgregar} >Agregar a Carrito</button>
+      ): <p></p>}
     </div>
   )
 }
