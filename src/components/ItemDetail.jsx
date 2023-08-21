@@ -29,7 +29,7 @@ function ItemDetail( props ) {
       <p>Categoria: {props.productos.categoria}</p>
       <img className="imgProducto" src={ cocoa }/>
       <p>Detalle del producto: {props.productos.descripcion}</p>
-      <p>Precio: $ {props.productos.precio}</p>
+      <p>Precio: $ {(props.productos.precio).toLocaleString()}</p>
       {mostrarCount ? (
         <ItemCount initial={0} stock={stock} onAdd={onAdd} />
       ) : <Link to="/cart"><button>Ir a Carrito</button></Link> }

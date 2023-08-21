@@ -36,11 +36,10 @@ export async function traerProductosPorId(id){
   const producto = resultado.data()
   producto.id = resultado.id
   return producto
-  
 }
 
 export async function guardarOrden(data){
-  const coleccionProductos = collection(db, "productos");
+  const coleccionProductos = collection(db, "ordenes");
   const resultado = await addDoc(coleccionProductos, data)
   return resultado
 }

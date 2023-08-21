@@ -1,12 +1,12 @@
 import { useState } from "react"
 import { Provider } from "../cartContext"
+import { toast } from "react-toastify";
 
 function CartProvider(props) {
 
   //ESTADOS
   const [carrito, setCarrito] = useState([]);
   const [cantidadTotal, setCantidadTotal] = useState(0)
-
 
   // ACCIONES
   const addItem = (nuevaCantidad, productoAgregado)=>{
@@ -29,11 +29,9 @@ function CartProvider(props) {
     productoAgregado.cantidadItem = nuevaCantidad;
     const copia = [...carrito, productoAgregado];
     setCarrito(copia);
-    console.log(carrito)
   }
   
-  setCantidadTotal(cantidadTotal + nuevaCantidad);
-  
+  setCantidadTotal(cantidadTotal + nuevaCantidad);  
 }
 
   const removeItem =(id) => {
@@ -45,18 +43,24 @@ function CartProvider(props) {
       copia.splice(productoIndex, 1);
       setCarrito(copia);
       setCantidadTotal(cantidadTotal - cantidadEliminada);
+      toast.info("Producto Eliminado")
     }
   }
+
   const clearCart=() => {
     setCarrito([]);
     setCantidadTotal(0);
-   }
+  }
+
+  const suma=()=>{
+    return carrito.reduce((sum, item) => sum + item.precio * item.cantidadItem, 0);  
+  }
 
   
   const valorDelContexto = {
     carrito: carrito,
     cantidadTotal: cantidadTotal,
-    valorTotal: 0,
+    valorTotal: suma,
     addItem :addItem,
     removeItem:removeItem,
     clearCart:clearCart

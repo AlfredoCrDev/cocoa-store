@@ -5,8 +5,8 @@ function Item(props) {
   return (
       <div className="cardProducto">
         <h2>{props.producto.nombre}</h2>
-        <img className="imgProducto" src={ cocoa }/>
-        <p>Precio: $ {props.producto.precio}</p>
+        <img className="imgProducto" src={ cocoa } alt="producto"/>
+        <p>Precio: $ {(props.producto.precio).toLocaleString()}</p>
         <Link to={`/producto/${props.producto.id}`}>
           <button>Ver detalle</button>
         </Link>

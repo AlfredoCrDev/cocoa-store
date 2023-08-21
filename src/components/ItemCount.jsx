@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { toast } from "react-toastify"
 
 function ItemCount(props) {
 
@@ -18,6 +19,7 @@ function ItemCount(props) {
 
   function handleAgregar(){
     props.onAdd(count)
+    toast.success("Producto Agredao al Carrito")
   }
 
   return (

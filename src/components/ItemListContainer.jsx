@@ -3,6 +3,7 @@ import ItemList from './ItemList.jsx';
 import { useParams } from 'react-router-dom';
 import { traerProductos, traerProductosPorCategoria } from '../utils.jsx';
 import Loader from './Loader.jsx';
+import { toast } from 'react-toastify';
 
 
 function ItemListContainer() {
@@ -28,6 +29,9 @@ function ItemListContainer() {
       pedido.then((resultado)=> {
         setProductos(resultado)
         setLoader(false)
+      })
+      .catch(()=>{
+        toast.error("Error al traer los productos")
       })
   }, [parametros.id])
 

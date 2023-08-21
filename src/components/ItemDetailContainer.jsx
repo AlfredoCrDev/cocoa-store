@@ -3,6 +3,7 @@ import ItemDetail from './ItemDetail.jsx';
 import { useParams } from 'react-router-dom';
 import { traerProductos, traerProductosPorId } from '../utils.jsx';
 import Loader from './Loader.jsx';
+import { toast } from 'react-toastify';
 
 
 function ItemDetailContainer() {
@@ -28,6 +29,9 @@ function ItemDetailContainer() {
       producto.then((resultado)=> {
         setProductos(resultado)
         setLoader(false)
+      })
+      .catch(()=>{
+        toast.error("Error al traer el producto")
       })
 
     },[])
