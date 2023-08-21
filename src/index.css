@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   margin: 0;
 	padding: 0;
@@ -16,7 +20,6 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  background-color: black;
 }
 
 .navbar__links {
@@ -56,6 +59,11 @@
 
 .active {
   color: white;
+}
+
+.detail {
+  width: 350px;
+  
 }
 
 .imgProducto {

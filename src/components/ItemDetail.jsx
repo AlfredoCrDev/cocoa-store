@@ -24,7 +24,7 @@ function ItemDetail( props ) {
   }
 
   return (
-    <div>
+    <div className="detail shadow-2xl p-5 m-5 rounded-lg bg-pink-100">
       <h2>{props.productos.nombre}</h2>
       <p>Categoria: {props.productos.categoria}</p>
       <img className="imgProducto" src={ cocoa }/>

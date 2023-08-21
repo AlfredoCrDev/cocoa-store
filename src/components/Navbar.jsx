@@ -7,13 +7,13 @@ import cocoaLogo from "../img/cocoa-logo.png"
 function Navbar() {
 
   return (
-    <header className='navbar'>
+    <header className='navbar bg-black text-pink-300'>
       <div>
         <NavLink to="/">
           <img src={ cocoaLogo } className="logo" alt="logo cocoa" />
         </NavLink>
       </div>
-      <nav className="navbar__links">
+      <nav className="navbar__links text-red">
         <NavLink to="/">Home</NavLink>
         <NavLink to="/categoria/Labiales">Labiales</NavLink>
         <NavLink to="/categoria/Skincare">Cuidado Facial</NavLink>

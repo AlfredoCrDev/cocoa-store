@@ -23,8 +23,8 @@ function ItemCount(props) {
   }
 
   return (
-    <div>
-      <button onClick={handleRestar} >-</button>
+    <div className="flex justify-around p-3 ">
+      <button onClick={handleRestar}>-</button>
       <p>{count}</p>
       <button onClick={handleSumar}>+</button>
       {count !== 0? (
