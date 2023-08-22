@@ -43,6 +43,7 @@ function CartProvider(props) {
   const clearCart=() => {
     setCarrito([]);
     setCantidadTotal(0);
+    toast.info("Se eliminaron todos los productos del carrito!")
   }
 
   const suma=()=>{

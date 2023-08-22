@@ -4,7 +4,6 @@ import { useContext, useState } from "react";
 import cocoa from "../img/cocoa-logo.png"
 import { Link } from "react-router-dom";
 
-
 function ItemDetail( props ) {
 
   const valorDelContexto = useContext(contexto)
@@ -20,7 +19,6 @@ function ItemDetail( props ) {
     setMostrarCount(false);
     valorDelContexto.addItem(cantidadProducto, props.productos)
     setStock(stock-cantidadProducto)
-    //Agregar alerta tostify
   }
 
   return (

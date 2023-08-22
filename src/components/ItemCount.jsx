@@ -19,7 +19,7 @@ function ItemCount(props) {
 
   function handleAgregar(){
     props.onAdd(count)
-    toast.success("Producto Agredao al Carrito")
+    toast.success("Producto agregado al carrito con éxito")
   }
 
   return (

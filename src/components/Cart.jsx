@@ -79,7 +79,7 @@ function Cart() {
           {carrito.map((item) => (
             <tr key={item.id} className="cart-item">
               <td>{item.nombre}</td>
-              <td>$ {item.precio.toLocaleString()}</td>
+              <td>$ {(item.precio).toLocaleString()}</td>
               <td>{item.cantidadItem}</td>
               <td>
                 <button className="bg-red-600 p-1 rounded-sm" onClick={() => removeItem(item.id)}>X</button>
@@ -127,7 +127,7 @@ function Cart() {
 
       <div className="flex p-3 justify-center space-x-6 ">
         {<button className="p-3 rounded-md bg-green-400" onClick={handeClick} >Confirmar Comprar</button>}
-        {<button className="p-3 rounded-md bg-red-500" >Vaciar Carrito</button>}
+        {<button className="p-3 rounded-md bg-red-500" onClick={clearCarrito} >Vaciar Carrito</button>}
       </div>
 
     </div>
