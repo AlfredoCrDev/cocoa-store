@@ -63,5 +63,5 @@ Este proyecto fue creado utilizando Vite, un sistema de construcción y desarrol
 
 ## Demo
 
-[Video demo](https://imgur.com/a/RKpcrhF)
-[deploy](https://cocoa-store.vercel.app/)
+* [Video demo](https://imgur.com/a/RKpcrhF)
+* [deploy](https://cocoa-store.vercel.app/)
