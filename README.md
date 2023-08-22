@@ -30,6 +30,12 @@ Versión: 6.14.1
 
 React Router es una librería de enrutamiento utilizada en aplicaciones React para gestionar las rutas y la navegación entre diferentes vistas. La versión react-router-dom es específica para aplicaciones web y proporciona herramientas para crear rutas y manejar la navegación en el navegador.
 
+### tailwindcss
+
+Versión: 3.3.3
+
+Marco de diseño CSS que ofrece clases utilitarias configurables para acelerar el diseño de interfaces.
+
 ### react-toastify
 
 Versión: 9.1.3
@@ -54,3 +60,8 @@ Este proyecto fue creado utilizando Vite, un sistema de construcción y desarrol
 4. Una vez instaladas las dependencias utilizar el siguiente comando:
     ```bash
     npm run dev
+
+## Demo
+
+[Video demo](https://imgur.com/a/RKpcrhF)
+[deploy](https://cocoa-store.vercel.app/)
