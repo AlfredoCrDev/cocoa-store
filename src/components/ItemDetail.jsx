@@ -24,16 +24,16 @@ function ItemDetail( props ) {
   }
 
   return (
-    <div className="detail shadow-2xl p-5 m-5 rounded-lg bg-pink-100">
-      <h2>{props.productos.nombre}</h2>
+    <div className="detail shadow-2xl p-5 m-5 rounded-lg bg-pink-100 flex flex-col items-center">
+      <h2 className="font-bold text-2xl">{props.productos.nombre}</h2>
       <p>Categoria: {props.productos.categoria}</p>
       <img className="imgProducto" src={ cocoa }/>
-      <p>Detalle del producto: {props.productos.descripcion}</p>
-      <p>Precio: $ {(props.productos.precio).toLocaleString()}</p>
+      <p className="text-center">Detalle del producto: {props.productos.descripcion}</p>
+      <p className="font-bold p-2">Precio: $ {(props.productos.precio).toLocaleString()}</p>
       {mostrarCount ? (
         <ItemCount initial={0} stock={stock} onAdd={onAdd} />
-      ) : <Link to="/cart"><button>Ir a Carrito</button></Link> }
-      {<p>Unidades disponibles: {stock} </p>}
+      ) : <Link to="/cart"><button className="p-2 rounded-lg bg-pink-400">Ir a Carrito</button></Link> }
+      {<p className="p-2 text-xs text-gray-500">Unidades disponibles: {stock} </p>}
     </div>
   );
 }

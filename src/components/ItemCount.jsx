@@ -23,13 +23,17 @@ function ItemCount(props) {
   }
 
   return (
-    <div className="flex justify-around p-3 ">
-      <button onClick={handleRestar}>-</button>
-      <p>{count}</p>
-      <button onClick={handleSumar}>+</button>
-      {count !== 0? (
-        <button onClick={handleAgregar} >Agregar a Carrito</button>
-      ): <p></p>}
+    <div className="flex-row  justify-around p-3 ">
+      <div className="flex justify-around p-2">
+        <button className="w-9 p-2 rounded-lg bg-pink-400" onClick={handleRestar}>-</button>
+        <p className="w-9 p-2 text-center text-lg">{count}</p>
+        <button className="w-9 p-2 rounded-lg bg-pink-400" onClick={handleSumar}>+</button>
+      </div>
+      <div className="flex justify-center p-2">
+        {count !== 0? (
+          <button className="p-2 rounded-lg bg-pink-400" onClick={handleAgregar} >Agregar a Carrito</button>
+        ): <p></p>}
+      </div>
     </div>
   )
 }
