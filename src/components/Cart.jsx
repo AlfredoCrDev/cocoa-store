@@ -57,7 +57,7 @@ function Cart() {
   if(ticket){
     return(
       <div>
-        <p>Felidades <strong>{userData.nombre}</strong> su compra se genero bajo el pedido <strong>{ticket}</strong></p>
+        <p className="text-center p-5 text-xl">Felidades <strong className="text-pink-600">{userData.nombre}</strong> su compra se genero bajo el pedido <strong className="text-pink-600">{ticket}</strong></p>
       </div>
     )
   }
