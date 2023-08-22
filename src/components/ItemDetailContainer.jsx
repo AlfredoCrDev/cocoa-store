@@ -10,13 +10,9 @@ function ItemDetailContainer() {
 
   const parametroID = useParams();
 
-  // ESTADOS
-
   const [productos, setProductos] = useState([]);
   const [loader, setLoader] = useState(true);
-  
-  // EFECTOS
-  
+    
   useEffect(()=>{
 
     let producto;
@@ -35,8 +31,6 @@ function ItemDetailContainer() {
       })
 
     },[])
-
-  //ACCIONES
 
   if(loader){
     return(

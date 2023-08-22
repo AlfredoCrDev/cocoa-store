@@ -4,11 +4,9 @@ import { toast } from "react-toastify";
 
 function CartProvider(props) {
 
-  //ESTADOS
   const [carrito, setCarrito] = useState([]);
   const [cantidadTotal, setCantidadTotal] = useState(0)
 
-  // ACCIONES
   const addItem = (nuevaCantidad, productoAgregado)=>{
 
   const productoExistenteIndex = carrito.findIndex(item => item.id === productoAgregado.id);

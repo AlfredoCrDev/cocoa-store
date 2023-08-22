@@ -10,13 +10,9 @@ function ItemListContainer() {
   
   const parametros = useParams()
   
-  // ESTADOS
-
   const [productos, setProductos] = useState([]);
   const [loader, setLoader] = useState(true)
-  
-  // EFECTOS
-  
+    
   useEffect(()=> {
 
     let pedido;
@@ -34,8 +30,6 @@ function ItemListContainer() {
         toast.error("Error al traer los productos")
       })
   }, [parametros.id])
-
-  //ACCIONES 
 
   if(loader){
     return (

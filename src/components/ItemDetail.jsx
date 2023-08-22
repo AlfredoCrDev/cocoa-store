@@ -8,12 +8,10 @@ function ItemDetail( props ) {
 
   const valorDelContexto = useContext(contexto)
 
-  // ESTADOS
   const [count, setCount] = useState(0);
   const [mostrarCount, setMostrarCount] = useState(true)
   const [stock, setStock] = useState(props.productos.stock)
 
-  // ACCIONES
   function onAdd(cantidadProducto){
     setCount(cantidadProducto);
     setMostrarCount(false);
